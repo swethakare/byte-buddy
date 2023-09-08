@@ -79,7 +79,7 @@ public class AbstractMethodCallProxyTest {
             public int compare(Class<?> a, Class<?> b) {
                 return a.getSimpleName().compareTo(b.getSimpleName());
             }
-        }; 
+        };
         Collections.sort(filteredFields, typeComparator);
         ArrayList<Class<?>> parameterTypes = new ArrayList<Class<?>>(Arrays.asList(proxyTarget.getDeclaredMethods()[0].getParameterTypes()));
         Collections.sort(parameterTypes, typeComparator);
